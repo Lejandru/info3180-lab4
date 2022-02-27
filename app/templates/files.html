@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block main %}
+
+{% for file in images %}
+    <div class = "grid">
+            <li>
+                <img src="{{ url_for('get_image', filename=file) }}"></img>
+            </li>    
+    </div>
+        
+{% endfor %}
+
+
+{% endblock %}
